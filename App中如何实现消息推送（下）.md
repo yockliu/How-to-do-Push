@@ -106,3 +106,7 @@ Google Cloud Messaging 是Google提供的推送通知服务。我没有用过，
 2. 如果是静默推送，则使用多个平台同时发送，每个消息带一个递增的id，客户端记录处理过的消息的id值，并且根据id进行判断，只处理大于记录下的id值的消息，这样可以防止重复处理。
 
 ## Demo
+
+提供了一个demo，包括一个Nodejs的PushServer，还有一个ios和android的demo程序。支持小米和AVOS两个平台。
+
+戳：<https://github.com/yockliu/How-to-do-Push>
