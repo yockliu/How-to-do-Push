@@ -23,7 +23,7 @@
 * Server create socket & listen
 * Client通过Internet访问Server，发送&接受数据
 	
-![Attachment-1](public/1.png)
+![Attachment-1](https://github.com/yockliu/How-to-do-Push/blob/master/public/1.png)
 
 ####Client
 
@@ -43,7 +43,7 @@ ps：首先我们要了解socket是什么，socket是基于tcp/ip协议的一个
 
 Server端和Client端有一个很重要的区别，`Server端是有固定的公网ip的，而Client端的ip不是固定的，甚至不一定具有公网ip`。Client访问Server时，实际是通过ip找到Server进行访问的（域名？域名最终也是被解析成ip），有固定的公网ip才方便互联网上的其他设备来访问。而反过来Server想找某个Client时，由于Client的ip不固定，Server端是无法找到Client的。所以即使Client这里放了一个socket在listen，Server找不到Client，还是连接不上Client。
 
-![Attachment-2](public/2.png)
+![Attachment-2](https://github.com/yockliu/How-to-do-Push/blob/master/public/2.png)
 
 综上所述，Client是无法使用Server的这种模式去被动接受Push的。是否有办法让Server端知道Client的ip呢，比如每次Client更换ip以后将ip发给Server？这种方法显然是成本高且不可靠的。
 
